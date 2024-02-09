@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class OnboardingOne extends StatelessWidget {
-  const OnboardingOne({super.key});
+  const OnboardingOne({super.key, required this.controller});
+  final PageController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class OnboardingOne extends StatelessWidget {
             ],
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -37,18 +38,11 @@ class OnboardingOne extends StatelessWidget {
                       side: const BorderSide(color: Colors.blue),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(7))),
-                  onPressed: () {},
-                  child: const Text(
-                    'Precedent',
-                    style: TextStyle(color: Colors.blue),
-                  )),
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
-                      side: const BorderSide(color: Colors.blue),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(7))),
-                  onPressed: () {},
+                  onPressed: () {
+                    controller.nextPage(
+                        duration: Duration(milliseconds: 200),
+                        curve: Curves.easeIn);
+                  },
                   child: const Text(
                     'Suivant',
                     style: TextStyle(color: Colors.blue),

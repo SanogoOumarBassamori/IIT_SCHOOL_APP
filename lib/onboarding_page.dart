@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:iit_school/onboarding_Overview.dart';
 
 class OnBoardingPage extends StatefulWidget {
-  const OnBoardingPage({super.key});
+  const OnBoardingPage({super.key,});
 
   @override
   State<OnBoardingPage> createState() => _OnBoardingPageState();
@@ -17,7 +17,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       await Future.delayed(Duration(seconds: 13));
 
       Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => const OnBoardingOverview()));
+          MaterialPageRoute(builder: (context) =>  OnBoardingOverview()));
 
       print('Hello2');
     });
