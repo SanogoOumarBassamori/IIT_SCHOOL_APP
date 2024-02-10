@@ -167,10 +167,6 @@ class ConnectionPage extends StatelessWidget {
                                             FaIcon(
                                               FontAwesomeIcons.facebook,
                                               size: 20,
-
-
-
-                                              
                                             ),
                                             SizedBox(
                                               width: 10,
